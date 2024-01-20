@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --background_1: #1c1c1c;
+    --background_2: #272727;
+
+    --accent_1: #22D4FD;
+
+    --color_body: #ddd;
+    --color_h1: #eee;
+    --color_button:var(--background_1);
+
+    --size_body: 1.5rem;
+    --size_h1:  2.25rem;
+
+    --font_body: 'Montserrat', sans-serif;
+    --font_h1: 'Krona One', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100dvh;
+    box-sizing: border-box;
+    background: var(--background_1);
+    color: var(--color_body);
+    font: 400 var(--size_body) var(--font_body);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: 5% 10% 0px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: var(--accent_1);
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10% 5%;
+}
+
+.container__content {
+    width: 50%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.container > img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container__content > h1 {
+    font: 400 var(--size_h1) var(--font_h1);
+    color: var(--color_h1);
+}
+
+.container__content > h1 .destaque {
+    color: var(--accent_1);
+    font-weight: bold;
+}
+
+.container__content > p {
+   text-align: justify;
+   line-height: 36px;
+}
+
+.container__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    width: 380px;
+    align-self: center;
+    text-align: center;
+}
+
+.container__links > h2 {
+ font: 400 var(--size_body) var(--font_h1); 
+ color: var(--color_h1);  
+}
+
+.container__links > a {
+    display: flex;
+    background: var(--background_1);
+    color: var(--color_h1);
+    border-radius: 8px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 20px;
+    border: 2px solid var(--accent_1);
+    transition: .5s all;
+}
+
+.container__links > a:hover {
+    background: var(--background_2);
+}
+
+.container__links > a > i,
+.container__links > a > em {
+    color: var(--accent_1);
+}
+
+footer {
+    padding: 1.5rem;
+    background: var(--accent_1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background_1);
+}
+
+@media (max-width: 1000px) {
+    body {
+        --background_1: #0e1a1a;
+    }
+
+    nav{
+        margin: 5% auto 0px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container__content {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .container > img {
+        width: 50%;
+    }
+
+    .container__links {
+        width: auto;
+    }
+
+}
